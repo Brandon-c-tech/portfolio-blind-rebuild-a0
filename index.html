@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><meta name="description" content="An independent, interactive reconstruction of Peter Oravec's pixel-city portfolio, made from a frozen text and image reference package."><title>Peter Oravec — Portfolio Reconstruction</title><link rel="stylesheet" href="style.css"><link rel="icon" href="assets/images/peter-oravec.gif"></head>
+<body>
+<canvas id="world" aria-label="Pixel city. Use arrow keys or W A S D to walk. Use the navigation to visit a location."></canvas>
+<div id="scanlines" aria-hidden="true"></div>
+<main id="entry">
+ <p class="tagline">Front-end, Angular, Node.js,<br>Javascript developer portfolio</p>
+ <div class="entry-center"><img class="entry-logo" src="assets/images/peteroravec-logo.webp" alt="Peter Oravec Portfolio"><button id="play" class="pixel-button coral">PLAY</button></div>
+ <div class="entry-footer"><span id="entry-note">No time to explore my portfolio?</span><a class="pixel-button blue" href="https://www.linkedin.com/in/peteroravec" target="_blank" rel="noopener">LinkedIn</a></div>
+</main>
+<div id="hud" hidden>
+ <img class="hud-logo" src="assets/images/peteroravec-logo.webp" alt="Peter Oravec Portfolio">
+ <nav class="top-nav" aria-label="Portfolio"><button class="pixel-button hanging" data-go="about">About me</button><button class="pixel-button hanging" data-go="cv">CV</button><button class="pixel-button hanging" data-go="projects">Projects</button><button class="pixel-button hanging" data-go="technologies">Technologies</button><button class="pixel-button hanging" data-go="memo">#memo</button><button class="pixel-button hanging" data-go="contact">Contact</button></nav>
+ <div class="mobile-nav"><button class="pixel-button hanging" data-go="map">MAP</button><button class="pixel-button hanging" id="menu-toggle" aria-label="Menu" aria-expanded="false">Menu</button></div>
+ <button id="mini-map" aria-label="Open map"><span class="mini-screen"><img src="assets/maps/full-map.webp" alt="World mini map"><span id="mini-markers"></span><img class="map-player" id="mini-player" src="assets/images/peter-oravec.gif" alt=""></span><img class="mini-frame" src="assets/images/ui/map-holder-mini3.webp" alt=""></button>
+ <nav class="bottom-nav" aria-label="Tools"><button class="pixel-button hanging" id="fullscreen" aria-label="Fullscreen">[]</button><button class="pixel-button hanging" data-go="map">MAP</button><button class="pixel-button hanging" data-go="hood">Under the Hood</button><a class="pixel-button hanging language" href="sk/index.html">SK</a></nav>
+ <img id="keyboard-help" src="assets/images/ui/instructions-keyboard.webp" alt="Use arrow keys to move">
+ <div id="joystick" aria-label="Movement joystick" role="application"><img src="assets/images/ui/joystick-base.webp" alt=""><img id="joystick-ball" src="assets/images/ui/joystick-ball.webp" alt="Drag to walk"></div>
+</div>
+<div id="mobile-menu" hidden><button class="pixel-button coral close menu-close" aria-label="Close menu">X</button><nav aria-label="Mobile portfolio"><button class="pixel-button" data-go="about">About me</button><button class="pixel-button" data-go="cv">Resume (CV)</button><button class="pixel-button" data-go="projects">Projects</button><button class="pixel-button" data-go="technologies">Technologies</button><button class="pixel-button" data-go="memo">#memo</button><button class="pixel-button" data-go="contact">Contact</button><button class="pixel-button" data-go="hood">Under the Hood</button><a class="pixel-button language" href="sk/index.html">Slovensky</a></nav></div>
+<div id="overlay" hidden role="dialog" aria-modal="true" aria-label="Portfolio content"><div id="panel-host"></div></div>
+<button id="close-panel" class="pixel-button coral close" aria-label="Close" hidden>X</button>
+<div id="landscape"><img src="assets/images/ui/rotate-device.svg" alt="Rotate your device"><p>Rotate your device</p></div>
+<div id="loader"><img src="assets/images/peter-oravec.gif" alt="Loading"><div class="loading-bar"><span></span></div><output>0%</output></div>
+<script src="world.js"></script><script src="content.js"></script><script src="app.js"></script>
+</body></html>
